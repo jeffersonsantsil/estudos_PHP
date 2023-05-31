@@ -6,6 +6,7 @@ class Conta
 	private string $cpfTitular;
 	private string $nomeTitular;
 	private float $saldo;
+	private static $numeroDeContas = 0;
 
 
 	public function __construct(string $cpf, $nome)
@@ -14,6 +15,8 @@ class Conta
 		$this->cpfTitular = $cpf;
 		$this->nomeTitular = $nome;
 		$this->saldo = 0;
+
+		self::$numeroDeContas++;
 	}
 
 	public function sacar($valorASacar)
@@ -75,5 +78,11 @@ class Conta
 	private function mensagens($msg)
 	{
 		echo $msg;
+	}
+
+	public static function contaContas()
+	{
+		## "self" é o equivalente a "this", o "self" é usado para chamar um atributo "static" que pertence a classe
+		return self::$numeroDeContas;
 	}
 }
