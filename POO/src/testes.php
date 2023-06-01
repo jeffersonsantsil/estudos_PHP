@@ -1,14 +1,15 @@
 <?php
 
 require_once 'Conta.php';
+require_once 'Titular.php';
 
-$contaJeff = new Conta("123.456.789-01", "anaad");
-$contaNanda = new Conta("123.456.789-02", "Fernanda Silva");
-$contaTeste = new Conta("123.456.789-03", "Bianca Silva");
-
+$contaJeff = new Conta( new Titular("123.456.789-01", "Jefferson Silva"));
+$contaNanda = new Conta(new Titular("123.456.789-02", "Fernanda Silva"));
+$contaTeste = new Conta(new Titular("123.456.789-03", "Bianca"));
 
 
 echo "<pre>";
 
-echo $contaTeste->contaContas();
+echo $contaJeff->mostrarNomeTitular();
+
 

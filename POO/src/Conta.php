@@ -3,19 +3,15 @@
 
 class Conta
 {
-	private string $cpfTitular;
-	private string $nomeTitular;
+	private $titular;
 	private float $saldo;
 	private static $numeroDeContas = 0;
 
 
-	public function __construct(string $cpf, $nome)
+	public function __construct(Titular $titular)
 	{
-		$this->validaNome($nome);
-		$this->cpfTitular = $cpf;
-		$this->nomeTitular = $nome;
+		$this->titular = $titular;
 		$this->saldo = 0;
-
 		self::$numeroDeContas++;
 	}
 
@@ -51,34 +47,18 @@ class Conta
 		}
 	}
 
-	public function mostraNome(): string
-	{
-		return $this->nomeTitular;
-	}
-
-	public function mostraCpfTitular(): string
-	{
-		return $this->cpfTitular;
-	}
-
 	public function mostraSaldo(): float
 	{
 		return $this->saldo;
 	}
 
 
-	private function validaNome(string $nome)
+	public function mostrarNomeTitular()
 	{
-		if (strlen($nome) < 5) {
-			return $this->mensagens("É necessário que o tamanho do nome do usuário seja maior que 5.");
-			exit();
-		}		
+		return $this->titular->mostrarNomeTitular();
 	}
 
-	private function mensagens($msg)
-	{
-		echo $msg;
-	}
+
 
 	public static function contaContas()
 	{
