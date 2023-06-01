@@ -2,15 +2,13 @@
 
 class Titular
 {
+    private $cpf;
+    private string $nomeTitular;    
 
 
-    private string $nomeTitular;
-    private string $cpfTitular;
-
-
-    public function __construct(string $cpf, string $nome)
+    public function __construct(Cpf $cpf, string $nome)
     {
-        $this->cpfTitular = $cpf;
+        $this->cpf = $cpf;
         $this->validaNomeTitular($nome);
         $this->nomeTitular = $nome;
     }
@@ -24,7 +22,7 @@ class Titular
 
     public function mostrarCpfTitular()
     {
-        return $this->cpfTitular;
+        return $this->cpf->getCpf();
     }
 
 
@@ -34,6 +32,6 @@ class Titular
         if (strlen($nomeTitular) < 5) {
             echo "É necessário que o tamanho do nome do usuário seja maior que 5.";
             exit();
-        }        
+        }
     }
 }
