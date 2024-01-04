@@ -16,7 +16,7 @@
     <H1>CRUD - em PHP usando PDO</H1>
 
     <div class="erros" hidden>
-
+     
     </div>
 
     <div class="geral">
