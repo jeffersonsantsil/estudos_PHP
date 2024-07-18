@@ -2,7 +2,7 @@
 require_once "Conexao.php";
 $conn = new Conexao("mysql", "testesphp", "localhost", "root", "");
 
-class Pessoa
+class OldPessoa
 {
     public function usersList(Conexao $conn)
     {
@@ -19,7 +19,7 @@ class Pessoa
     // {
     //     $senha = $this->codificarSenha($password);
     //     $insert = $this->pdo->prepare("INSERT INTO pessoa(nome, cpf, email, senha) VALUES (:nome, :cpf, :email, :senha)");
-    //     $insert->bindValue(":nome", "$nome");        
+    //     $insert->bindValue(":nome", "$nome");
     //     $insert->bindValue(":email", "$email");
     //     $insert->bindValue(":senha", "$senha");
     //     $insert->execute();
@@ -43,7 +43,7 @@ class Pessoa
     //         exit();
     //     }
     //     if ($campo == "senha") {
-    //         $value = $this->codificarSenha($value);  
+    //         $value = $this->codificarSenha($value);
 
     //     } else {
     //         $update = $this->pdo->prepare("UPDATE pessoa SET $campo = :atualizar WHERE id = $id");

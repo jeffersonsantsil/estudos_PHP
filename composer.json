@@ -1,0 +1,17 @@
+{
+    "name": "jefferson.silva/estudos_php",
+    "description": "Meus estudos em Programação Orientada a Objetos usando PHP",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "JeffersonSilva\\EstudosPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jefferson Silva",
+            "email": "jeffersonsantsil@gmail.com"
+        }
+    ],
+    "require": {}
+}
