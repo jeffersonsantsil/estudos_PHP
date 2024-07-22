@@ -22,16 +22,4 @@ abstract class Pessoa
         $this->phone = $phone;
     }
 
-    public function getName(): void
-    {
-        echo $this->name;
-    }
-    public function getEmail(): void
-    {
-        echo $this->email;
-    }
-    public function getPhone(): void
-    {
-        echo $this->phone;
-    }
 }

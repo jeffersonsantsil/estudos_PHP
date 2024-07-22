@@ -41,3 +41,9 @@ dump($jefferson);
 dump($emerson);
 
 dump($jhennifer);
+
+echo $emerson->apresentacao();
+
+$emerson->name = ("Emerson Silva - LTDA");
+
+echo $emerson->apresentacao();

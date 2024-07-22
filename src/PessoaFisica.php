@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 namespace JeffersonSilva\EstudosPhp;
 
-class PessoaFisica extends Pessoa
+class PessoaFisica extends Pessoa implements PessoaFisicaInterface
 {
     private string $cpf;
     private string $dateBorn;
@@ -34,5 +34,18 @@ class PessoaFisica extends Pessoa
         $age = date('Y') - substr($this->dateBorn, -4);
         $apresentacao = $this->getName() . " tem o e-mail " . $this->getEmail() . " e tem " . $age . " anos.";
         return $apresentacao . PHP_EOL;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+    public function getCpf(): string
+    {
+        return $this->cpf;
+    }
+    public function getEmail(): string
+    {
+        return $this->email;
     }
 }
