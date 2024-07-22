@@ -25,7 +25,8 @@
         "tree.indentGuidesStroke": "#008070"
     },
     "intelephense.environment.phpVersion": "8.1.0",
-    "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+    //"php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+    "php.validate.executablePath": "C:\\php\\82\\php\\php.exe",
     "gitlens.statusBar.enabled": false,
     "gitlens.hovers.enabled": false,
     "gitlens.blame.format": "${author|10} ${date}",
